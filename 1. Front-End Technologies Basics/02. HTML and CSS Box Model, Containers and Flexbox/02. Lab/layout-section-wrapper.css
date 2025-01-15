@@ -1,0 +1,19 @@
+
+.container{
+    border: 2px, solid, green;
+    margin-bottom: 3em;
+}
+
+.header, 
+.main,
+.footer{
+    border: 2px, solid, black;
+    margin: 2em;
+}
+
+header, main, footer{
+    border: 2px, solid, blue;
+    text-align: left;
+    padding: 40px, 0;
+    margin: 3em;
+}

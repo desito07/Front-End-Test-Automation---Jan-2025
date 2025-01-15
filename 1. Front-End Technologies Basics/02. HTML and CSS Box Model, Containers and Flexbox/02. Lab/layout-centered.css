@@ -1,0 +1,21 @@
+
+body{
+    border: 2px, solid, grey;
+}
+
+.container{
+    border: 2px, solid, green;
+    margin-bottom: 3em;
+}
+
+.content-wrapper{
+    border: 2px, solid, blue;
+    margin: 2em 5em;
+}
+
+.content-wrapper > * {
+    border: 2px, solid, black;
+    text-align: center;
+    padding: 40px, 0;
+    margin: 2em;
+}
