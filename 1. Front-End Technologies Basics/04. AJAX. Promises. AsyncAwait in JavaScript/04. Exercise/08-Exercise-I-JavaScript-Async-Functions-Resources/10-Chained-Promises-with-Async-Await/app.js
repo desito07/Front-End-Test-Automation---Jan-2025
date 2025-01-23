@@ -1,0 +1,22 @@
+async function chainedPromisesAsync() {
+    let p1 = await new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("1 second");
+        }, 1000);
+    });
+    let p2 = await new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("2 seconds");
+        }, 2000);
+    });
+    let p3 = await new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("3 seconds");
+        }, 3000);
+    });
+
+    console.log(p1, p2, p3);
+}
+
+chainedPromisesAsync();
+
