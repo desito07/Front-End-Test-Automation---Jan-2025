@@ -1,3 +1,0 @@
-async function simplePromiseAsync() {
-    // TODO
-}

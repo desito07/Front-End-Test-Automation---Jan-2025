@@ -1,3 +1,0 @@
-function allPromise() {
-    // TODO
-}

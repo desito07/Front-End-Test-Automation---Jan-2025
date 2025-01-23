@@ -1,3 +1,0 @@
-function promiseWithMultipleHandlers() {
-    // TODO
-}
