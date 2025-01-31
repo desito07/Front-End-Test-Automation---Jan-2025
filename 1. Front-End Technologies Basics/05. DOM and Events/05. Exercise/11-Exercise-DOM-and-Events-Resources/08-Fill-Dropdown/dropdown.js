@@ -1,3 +1,15 @@
 function addItem() {
-    // TODO...
+    let inputTextElement = document.getElementById("newItemText");
+    let inputValueElement = document.getElementById("newItemValue");
+
+    let selectElement = document.getElementById("menu");
+
+    let option = document.createElement("option");
+    option.textContent = inputTextElement.value;
+
+    selectElement.appendChild(option);
+
+    inputTextElement.value = '';
+    inputValueElement.value = '';
+
 }
