@@ -1,5 +1,5 @@
 const { test, describe, beforeEach, afterEach, beforeAll, afterAll, expect } = require('@playwright/test');
-const { chromium} = require('playwright');
+const { chromium } = require('playwright');
 
 const host = 'http://localhost:3000';
 
@@ -150,10 +150,72 @@ describe("e2e tests", () => {
             await expect(page.locator('//a[text()="Register"]')).toBeVisible();
         });
     });
-    describe("CRUD tests", () => {
 
+    describe("CRUD tests", async() => {
+        beforeEach(async() => {
+            await page.goto(host);
+            await page.click('//a[text()="Login"]');
+            await page.waitForSelector("form");
+
+            await page.fill('//input[@type="email"]', user.email);
+            await page.fill('//input[@type="password"]', user.password);
+            await page.click('//input[@type="submit"]');
+        });
+        test("Create does NOT work with empty fields", async () => {
+            await page.click('//a[@href="/create"]');
+            await page.waitForSelector("form");
+            
+            page.on('dialog', async dialog => {
+                expect(dialog.message()).toBe("All fields are required!");
+                await dialog.accept();
+            });
+            
+            await page.click('//input[@type="submit"]');
+
+            expect(page.url()).toBe(host + '/create');
+        });
+
+        test("Create a game with valid input values", async () => {
+            let random = Math.floor(Math.random() * 1000);
+            game.title = `Game title ${random}`;
+            game.category =  `Game category ${random}`;
+                        
+            await page.click('//a[@href="/create"]');
+            await page.waitForSelector("form");
+            
+            await page.fill('//input[@id="title"]', game.title);
+            await page.fill('//input[@id="category"]', game.category);
+            await page.fill('//input[@id="maxLevel"]', game.maxLevel);
+            await page.fill('//input[@id="imageUrl"]', game.imageUrl);
+            await page.fill('//textarea[@id="summary"]', game.summary);
+            await page.click('//input[@type="submit"]');
+
+            await expect(page.locator(`//div[@class="game"]//h3[text()="${game.title}"]`)).toBeVisible();
+            expect(page.url()).toBe(host + '/');
+        });
+
+        test("Correct details when open a game that is created by me", async() => {
+            await page.goto(host + "/catalog");
+            await page.click(`//div[@class="allGames"]//h2[text()='${game.title}']//following-sibling::a`);
+            game.id = page.url().split('/').pop();
+
+            await expect(page.locator('//a[text()="Edit"]')).toBeVisible();
+            await expect(page.locator('//a[text()="Delete"]')).toBeVisible();
+        });
+
+        test("Non owners cannot see Edit and Delete buttons", async() => {
+            await page.goto(host + "/catalog");
+            await page.click('//div[@class="allGames"]//h2[text()="MineCraft"]/parent::div//a');
+            
+            await expect(page.locator('//a[text()="Edit"]')).toBeHidden();
+            await expect(page.locator('//a[text()="Delete"]')).toBeHidden();
+        });
+
+        test("Editwith valid data successfully modifies the game", async() => {
+            
+        });
     });
-
+   
     describe("Home Page tests", () => {
         test("Correct data on home page", async() => {
             await page.goto(host);
