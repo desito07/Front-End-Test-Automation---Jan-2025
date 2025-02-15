@@ -85,7 +85,7 @@ function solve() {
         function onBack()
         {
             puchaseSuccess.style.display = "none";
-            purchaseButton.disabled = true;
+            purchaseButton.disabled = false;
         }
 
 
