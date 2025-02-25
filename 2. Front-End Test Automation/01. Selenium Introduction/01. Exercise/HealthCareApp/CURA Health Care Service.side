@@ -1,0 +1,400 @@
+{
+  "id": "3c96b7fd-8484-4863-8683-9222983100a9",
+  "version": "2.0",
+  "name": "CURA Health Care Service",
+  "url": "https://katalon-demo-cura.herokuapp.com/",
+  "tests": [{
+    "id": "0e78f3b2-8350-46d4-ba6a-f56a6e519b00",
+    "name": "TC_1_Verify Footer",
+    "commands": [{
+      "id": "4b744490-c181-4000-b75a-bde57b211bfd",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58ef1c51-7375-4c9b-b454-d7b3a7aee1a5",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//h4//strong",
+      "targets": [],
+      "value": "CURA Healthcare Service"
+    }, {
+      "id": "a818339b-f9af-4363-a238-cbfcea5cc7bb",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class=\"col-lg-10 col-lg-offset-1 text-center\"]//p[not (contains(@class, \"text-muted\"))]",
+      "targets": [],
+      "value": "Atlanta 550 Pharr Road NE Suite 525\\nAtlanta, GA 30305"
+    }, {
+      "id": "7c156915-339d-479b-9d97-67dd21209fcb",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//i[@class=\"fa fa-phone fa-fw\"]/parent::li",
+      "targets": [],
+      "value": " (678) 813-1KMS"
+    }, {
+      "id": "29d34954-742b-47ee-b1da-31fc18b9492e",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//i[@class=\"fa fa-envelope-o fa-fw\"]/following-sibling::a",
+      "targets": [],
+      "value": "info@katalon.com"
+    }, {
+      "id": "e67f91ec-8122-4ca5-bd04-1cf9f7817986",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//i[@class=\"fa fa-facebook fa-fw fa-3x\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "656881a2-a825-49f8-9682-fccc25e9caf0",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//i[@class=\"fa fa-twitter fa-fw fa-3x\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b0e20937-bddc-49d7-b692-6018e8991509",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//i[@class=\"fa fa-dribbble fa-fw fa-3x\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c67b3ec5-c287-4dd0-93d9-96f9836d906e",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "040b3188-dacf-46ad-8331-98f09433e82f",
+    "name": "TC_2_Login and Logout",
+    "commands": [{
+      "id": "51c848af-b7bd-46d4-b99c-025c38443c74",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "119c3bc2-0958-4544-afdb-f41c2389ef5f",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[@id=\"btn-make-appointment\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e8c402b3-137e-4f8f-a7cb-66dc9a1cfd93",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//a[@id=\"btn-make-appointment\"]",
+      "targets": [],
+      "value": "Make Appointment"
+    }, {
+      "id": "d8c83b3c-de21-4e28-b6bd-b6bb17e24749",
+      "comment": "",
+      "command": "click",
+      "target": "//a[@id=\"btn-make-appointment\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee1f2cf7-1a21-4b5d-9ef0-e7f8a31ff012",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class=\"col-sm-12 text-center\"]//h2",
+      "targets": [],
+      "value": "Login"
+    }, {
+      "id": "545608f2-19d3-46cc-b7c8-f52b801ef2ed",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class=\"col-sm-12 text-center\"]//p[@class=\"lead\"]",
+      "targets": [],
+      "value": "Please login to make appointment."
+    }, {
+      "id": "e47a26ca-9a2b-43d6-aeff-0ec6dc19a010",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class=\"form-group\"]//label[@for=\"txt-username\"]",
+      "targets": [],
+      "value": "Username"
+    }, {
+      "id": "bb21dc93-4b7d-4198-baf4-7be95509b3e4",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class=\"form-group\"]//label[@for=\"txt-password\"]",
+      "targets": [],
+      "value": "Password"
+    }, {
+      "id": "046fc053-0212-4883-a999-24ce741e24cf",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@id=\"txt-username\"]",
+      "targets": [],
+      "value": "John Doe"
+    }, {
+      "id": "73560107-d539-464f-8126-cbb182b548c9",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@id=\"txt-password\"]",
+      "targets": [],
+      "value": "ThisIsNotAPassword"
+    }, {
+      "id": "f3b77ddb-29a0-48b3-9893-827322a228c2",
+      "comment": "",
+      "command": "click",
+      "target": "//button[@id=\"btn-login\"]",
+      "targets": [],
+      "value": "Login"
+    }, {
+      "id": "457fde35-666b-418e-8690-3490172f6208",
+      "comment": "",
+      "command": "open",
+      "target": "https://katalon-demo-cura.herokuapp.com/#appointment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6225f33a-6dd0-48ac-9c0e-e2fda59c11d5",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class=\"col-sm-12 text-center\"]//h2",
+      "targets": [],
+      "value": "Make Appointment"
+    }, {
+      "id": "730e73ee-8937-4d3a-ab75-a2e2b3aab4cf",
+      "comment": "",
+      "command": "click",
+      "target": "//a[@id=\"menu-toggle\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96f1b15c-d4ea-4ad4-8046-7450335d9f92",
+      "comment": "",
+      "command": "click",
+      "target": "//a[@href=\"authenticate.php?logout\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70f244c8-6151-442f-8dc3-32c5527c7651",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[@id=\"btn-make-appointment\"]",
+      "targets": [],
+      "value": "Make Appointment"
+    }, {
+      "id": "9713b23b-ea04-4003-b5de-281b86aa25df",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "27f22c1b-8ec2-441f-861d-cc0d198801d6",
+    "name": "TC_3_Make an Appointment",
+    "commands": [{
+      "id": "8a8ac71c-4a0e-47fb-88ff-070171c48daa",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4bc96f0-711c-4640-80d4-3b8d1d872e46",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[@id=\"btn-make-appointment\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "35bfd3eb-1c6d-4bf2-a31e-a634587e29f2",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//a[@id=\"btn-make-appointment\"]",
+      "targets": [],
+      "value": "Make Appointment"
+    }, {
+      "id": "68ff462c-e42d-4bd9-9788-c1b1469d4f58",
+      "comment": "",
+      "command": "click",
+      "target": "//a[@id=\"btn-make-appointment\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8a2df5da-1c9c-41e7-915c-a76cf3e13576",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@id=\"txt-username\"]",
+      "targets": [],
+      "value": "John Doe"
+    }, {
+      "id": "9c6bbf06-dc1d-441c-831b-7dec8e0c7cb4",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@id=\"txt-password\"]",
+      "targets": [],
+      "value": "ThisIsNotAPassword"
+    }, {
+      "id": "246edf91-3b7e-4e57-990e-0995b445ee00",
+      "comment": "",
+      "command": "click",
+      "target": "//button[@id=\"btn-login\"]",
+      "targets": [],
+      "value": "Login"
+    }, {
+      "id": "7bea4412-200c-4de9-a0cb-611741fafd14",
+      "comment": "",
+      "command": "open",
+      "target": "https://katalon-demo-cura.herokuapp.com/#appointment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e292742d-6b62-4b98-b22c-30591ade97b6",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class=\"col-sm-12 text-center\"]//h2",
+      "targets": [],
+      "value": "Make Appointment"
+    }, {
+      "id": "e1a1b427-9ef9-4d2f-9f20-213088fab88d",
+      "comment": "",
+      "command": "select",
+      "target": "//div[@class=\"col-sm-4\"]//select[@id=\"combo_facility\"]",
+      "targets": [],
+      "value": "Hongkong CURA Healthcare Center"
+    }, {
+      "id": "c19b130a-6e3d-44d5-b3cc-e969719040e5",
+      "comment": "",
+      "command": "click",
+      "target": "//input[@id=\"radio_program_none\"]",
+      "targets": [],
+      "value": "None"
+    }, {
+      "id": "931a4c90-fda6-425d-b301-81ff3fad4796",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@id=\"txt_visit_date\"]",
+      "targets": [],
+      "value": "10/02/2025"
+    }, {
+      "id": "527ee87b-7b53-4405-862b-8d9034a8c425",
+      "comment": "",
+      "command": "type",
+      "target": "//textarea[@id=\"txt_comment\"]",
+      "targets": [],
+      "value": "Test"
+    }, {
+      "id": "52a59a29-1d3a-4b6e-8536-49ca47d29889",
+      "comment": "",
+      "command": "click",
+      "target": "//button[@id=\"btn-book-appointment\"]",
+      "targets": [],
+      "value": "Book Appointment"
+    }, {
+      "id": "e5392ab2-899b-4690-8671-0d694e575a86",
+      "comment": "",
+      "command": "open",
+      "target": "https://katalon-demo-cura.herokuapp.com/appointment.php#summary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d8fe0ae-9cc8-4369-a19e-e53ea26e3501",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class=\"col-xs-12 text-center\"]//h2",
+      "targets": [],
+      "value": "Appointment Confirmation"
+    }, {
+      "id": "660b8d6f-aaa8-4007-9bc3-b950771483d0",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class=\"col-xs-8\"]//p[@id=\"facility\"]",
+      "targets": [],
+      "value": "Hongkong CURA Healthcare Center"
+    }, {
+      "id": "a1e1926e-dd76-4f29-9b5d-51903917f13d",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class=\"col-xs-8\"]//p[@id=\"hospital_readmission\"]",
+      "targets": [],
+      "value": "No"
+    }, {
+      "id": "c775d6a9-7c9c-4721-9f60-3f440fcc09ee",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class=\"col-xs-8\"]//p[@id=\"program\"]",
+      "targets": [],
+      "value": "None"
+    }, {
+      "id": "a7e05e26-e867-4511-b2f2-25c949e04a6c",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class=\"col-xs-8\"]//p[@id=\"visit_date\"]",
+      "targets": [],
+      "value": "10/02/2025"
+    }, {
+      "id": "e1d32bdc-f981-4d3f-b303-633cf78ab825",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class=\"col-xs-8\"]//p[@id=\"comment\"]",
+      "targets": [],
+      "value": "Test"
+    }, {
+      "id": "c6879167-f2c2-4c02-9597-8fd372e87393",
+      "comment": "",
+      "command": "click",
+      "target": "//div[@class=\"col-xs-12\"]//p[@class=\"text-center\"]//a[@class=\"btn btn-default\"]",
+      "targets": [],
+      "value": "Go to Homepage"
+    }, {
+      "id": "57bc465a-f8b1-4b3c-b067-a88d3c19d4aa",
+      "comment": "",
+      "command": "open",
+      "target": "https://katalon-demo-cura.herokuapp.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa871265-3bf9-4048-8183-0605cc99a729",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[@id=\"menu-toggle\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "423a68d6-8fd9-4aa3-9dc9-7b03e7420f14",
+      "comment": "",
+      "command": "click",
+      "target": "//a[@id=\"menu-toggle\"]//i[@class=\"fa fa-bars\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52f6a489-fb95-4b4b-9c74-84f10408ebf6",
+      "comment": "",
+      "command": "click",
+      "target": "//a[@href=\"authenticate.php?logout\"]",
+      "targets": [],
+      "value": "Logout"
+    }, {
+      "id": "a82cd409-c558-4dd2-ad81-7ac3e4ff0382",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "94e239ef-a300-47ca-96b0-9a1269557b04",
+    "name": "Health Care App",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0e78f3b2-8350-46d4-ba6a-f56a6e519b00", "040b3188-dacf-46ad-8331-98f09433e82f", "27f22c1b-8ec2-441f-861d-cc0d198801d6"]
+  }],
+  "urls": ["https://katalon-demo-cura.herokuapp.com/"],
+  "plugins": []
+}
