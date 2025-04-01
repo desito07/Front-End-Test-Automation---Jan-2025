@@ -1,0 +1,358 @@
+{
+  "id": "25c8c566-60fa-4ae8-8c21-2ccbea0a57e3",
+  "version": "2.0",
+  "name": "ExamPrepArchiveExam",
+  "url": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:85",
+  "tests": [{
+    "id": "7fa898e8-8ae4-4901-8973-83b6efe4cbc1",
+    "name": "01_HomePageNavigationNon-LoggedUserTest",
+    "commands": [{
+      "id": "ad2c70c6-6b38-4693-85bf-d41f33f323e4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7a3a9b50-f617-45e5-ae4a-21a246e33eec",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cb187995-8a7c-49b2-95bb-cb7969b79303",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Home Page - Foody.WebApp",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30d16f16-0884-4be9-90c6-d7d88c220481",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//a[@class='nav-link' and @href='/User/Register']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83dd5f17-b6a6-4a60-af11-ae24856e792c",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//a[@class='nav-link' and @href='/User/Login']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5ca74bc9-c673-4fe5-8e65-475582f0e226",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//a[@class='btn btn-primary btn-xl rounded-pill mt-5']",
+      "targets": [],
+      "value": "Learn More"
+    }, {
+      "id": "f4ca8efa-20b2-4b2f-b0b8-66e2fb897029",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6dc6bfb6-0a49-4278-9223-53585d856799",
+    "name": "02_LoginInTest",
+    "commands": [{
+      "id": "0174046a-112e-4773-8a6c-15e9f48411fd",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "372517bd-09fb-4203-bac5-2a9fcdb364f1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91f5cfc4-fd8d-4602-86cc-c469ac50c42d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[@class='nav-link' and @href='/User/Login']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e24a3fdd-ab5f-4258-8e7a-7cdc354db115",
+      "comment": "",
+      "command": "open",
+      "target": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:85/User/Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3a666a0-06fe-403a-895c-230b704011b2",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@id='username']",
+      "targets": [],
+      "value": "desi07"
+    }, {
+      "id": "e6dcfa6c-eecb-4971-b0ab-9959892aabe2",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@id='password']",
+      "targets": [],
+      "value": "123456"
+    }, {
+      "id": "84b6381c-c030-4171-9d00-d0bfd5d6616b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@class='btn btn-primary btn-block fa-lg gradient-custom-2 mb-3']",
+      "targets": [],
+      "value": "Log in"
+    }, {
+      "id": "e33cc78a-f2d1-4c8c-aff8-523de0f2687b",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//a[@class='nav-link mx-3']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b199278e-0895-49fe-b508-28599d1857b5",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//a[@class='nav-link' and @href='/Food/Add']",
+      "targets": [],
+      "value": "Add Food"
+    }, {
+      "id": "4625e64d-4f60-4ceb-a3de-8216aca647e0",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//a[@class='nav-link' and @href='/User/Logout']",
+      "targets": [],
+      "value": "Logout"
+    }, {
+      "id": "1411dd81-b1c9-49ab-b71d-91f91a2c108d",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//h2[@class='masthead-subheading mb-0']",
+      "targets": [],
+      "value": "Welcome, desi07!"
+    }, {
+      "id": "a0ac40c7-5433-4528-9a2e-5b91d562cbcd",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[@class='nav-link' and @href='/User/Logout']",
+      "targets": [],
+      "value": "Logout"
+    }, {
+      "id": "dd4abcc0-912b-4f36-b536-89c2d4110604",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//a[@class='nav-link' and @href='/User/Login']",
+      "targets": [],
+      "value": "Log In"
+    }, {
+      "id": "f09bbd78-596e-414f-8652-9fb096889730",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//h2[@class='masthead-subheading mb-0']",
+      "targets": [],
+      "value": "Share your homemade or store-bought food with us!"
+    }, {
+      "id": "6eae6757-9bd7-409c-8d06-906356c8e1d8",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f41e2ed5-01ec-4138-8f01-abdeb94eee41",
+    "name": "03_EditProfileTest",
+    "commands": [{
+      "id": "ede210b2-fa90-4c44-a01c-cb85d967eddb",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba8d141e-5a48-4469-a61b-cfa3bc0c0116",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b358bc76-7e0e-4062-bf5b-3c77a7b2e187",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[@class='nav-link' and @href='/User/Login']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9fed9f69-1d62-46c0-94a2-e434ef432a4e",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@id='username']",
+      "targets": [],
+      "value": "desi07"
+    }, {
+      "id": "81e81641-fdcd-4882-bdb8-6d0a2a835078",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@id='password']",
+      "targets": [],
+      "value": "123456"
+    }, {
+      "id": "032b944e-ee15-4b68-93b8-f1e195d91233",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@class='btn btn-primary btn-block fa-lg gradient-custom-2 mb-3']",
+      "targets": [],
+      "value": "Log in"
+    }, {
+      "id": "83014d1b-2420-4fa7-9546-816200ffb8b0",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//a[@class='nav-link mx-3']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "006669e0-f17b-4804-ac2d-82c03ceb8aba",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[@class='nav-link mx-3']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22697f30-8ba5-4910-b0d9-80d4873c77a9",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//a[@class='btn btn-primary']",
+      "targets": [],
+      "value": "Edit"
+    }, {
+      "id": "e69afe4d-dbdf-4448-97c4-3edac2bcf9fd",
+      "comment": "",
+      "command": "click",
+      "target": "//a[@class='btn btn-primary']",
+      "targets": [],
+      "value": "Edit"
+    }, {
+      "id": "9eb08a87-5777-468a-8e3d-cb40e70b5f80",
+      "comment": "",
+      "command": "open",
+      "target": "/Profile/Edit",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cb023b4c-511e-40a7-88ec-4e6d83f1db6d",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//input[@id='FirstName']",
+      "targets": [],
+      "value": "Desi"
+    }, {
+      "id": "7900f443-23e2-4649-babd-ed065557fb6d",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@id='FirstName']",
+      "targets": [],
+      "value": "Desi07"
+    }, {
+      "id": "d3777a09-fa66-4b84-98e1-acd0f0e88b7a",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//input[@id='MiddleName']",
+      "targets": [],
+      "value": "Mid Name"
+    }, {
+      "id": "7ce3135a-ca02-43eb-a04c-71acf6713ef7",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@id='MiddleName']",
+      "targets": [],
+      "value": "Ivanova"
+    }, {
+      "id": "da16d7ad-7e27-45ed-9071-1fe5f9cddf50",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//input[@id='LastName']",
+      "targets": [],
+      "value": "desi07"
+    }, {
+      "id": "9a293da3-d310-4ac1-9f41-14f3f4f0f626",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@id='LastName']",
+      "targets": [],
+      "value": "Andreeva"
+    }, {
+      "id": "b3d6bb67-ed6e-4f4a-84c0-c5231144edc0",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//input[@id='About']",
+      "targets": [],
+      "value": "About"
+    }, {
+      "id": "47f32f1a-2b86-4b7e-9d2b-b3ff5dc216f9",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@id='About']",
+      "targets": [],
+      "value": "I am healing"
+    }, {
+      "id": "cd6b73d0-3ddf-4cdd-8e76-d37602941fe1",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//button[@class='btn btn-primary btn-block fa-lg gradient-custom-2 mb-3']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5cf2c4be-2cd7-45dd-88b9-b1b608a1f66d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@class='btn btn-primary btn-block fa-lg gradient-custom-2 mb-3']",
+      "targets": [],
+      "value": "Add"
+    }, {
+      "id": "0064e30b-3f74-48b7-8832-b94958ac8fa6",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//p[text()='Desi07 Ivanova Andreeva']",
+      "targets": [],
+      "value": "Desi07 Ivanova Andreeva"
+    }, {
+      "id": "fbd52f2c-4887-4383-8902-18ae9cd7e6e0",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//p[text()='I am healing']",
+      "targets": [],
+      "value": "I am healing"
+    }, {
+      "id": "ce5a855a-b24c-408d-95cc-fb65bf91ef34",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//a[@class='nav-link' and @href='/User/Logout']",
+      "targets": [],
+      "value": "Logout"
+    }, {
+      "id": "7fc48954-824d-4916-a3ce-b72b41bd991f",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "49a98b29-47c3-4aa4-9e47-9be44709df07",
+    "name": "ExamPrepArchiveExamSuite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7fa898e8-8ae4-4901-8973-83b6efe4cbc1", "6dc6bfb6-0a49-4278-9223-53585d856799", "f41e2ed5-01ec-4138-8f01-abdeb94eee41"]
+  }],
+  "urls": ["http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:85/"],
+  "plugins": []
+}
